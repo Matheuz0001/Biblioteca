@@ -41,3 +41,5 @@ create index idx_emprestimo_aluno on Emprestimos(aluno_id);
 create index idx_emprestimo_status on Emprestimos(status);
 
 
+alter table Alunos 
+change column nomme nome varchar(100) not null;
