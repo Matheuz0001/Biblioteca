@@ -1,0 +1,49 @@
+biblioteca_pro/
+├── 📁 app/
+│   ├── 📁 Core/
+│   │   ├── Auth.php           # Autenticação (Sessões/JWT)
+│   │   ├── Database.php       # Conexão PDO Singleton
+│   │   └── Router.php         # Rotas amigáveis
+│   │
+│   ├── 📁 Controllers/        # Lógica
+│   │   ├── AuthController.php # Login/registro
+│   │   ├── LivroController.php
+│   │   ├── AlunoController.php
+│   │   └── EmprestimoController.php
+│   │
+│   ├── 📁 Models/             # Dados
+│   │   ├── LivroModel.php
+│   │   ├── AlunoModel.php
+│   │   └── EmprestimoModel.php
+│   │
+│   └── 📁 views/
+│       ├── 📁 layouts/        # Templates
+│       │   ├── header.php     # Navbar moderna
+│       │   ├── footer.php
+│       │   └── sidebar.php    # Opcional (dashboard)
+│       │
+│       ├── 📁 auth/           # Telas de login/registro
+│       ├── 📁 livros/         # CRUD livros
+│       ├── 📁 alunos/         # CRUD alunos
+│       └── 📁 emprestimos/    # Controle
+│
+├── 📁 public/
+│   ├── 📁 assets/
+│   │   ├── 📁 css/            # Bootstrap 5 + custom
+│   │   ├── 📁 js/             # Scripts modernos (ES6+)
+│   │   └── 📁 images/         # Ícones/Logos (SVG preferencial)
+│   │
+│   ├── 📁 uploads/            # Capas de livros (se aplicável)
+│   └── index.php              # Front Controller
+│
+├── 📁 config/
+│   ├── database.php           # Credenciais DB
+│   └── routes.php             # Definição de URLs
+│
+├── 📁 storage/
+│   ├── 📁 logs/               # Logs de erro
+│   └── 📁 cache/              # Cache de views (opcional)
+│
+├── 📜 .env                    # Variáveis de ambiente
+├── 📜 README.md               # Doc. completa
+└── 📜 composer.json           # Autoload + Dependências 

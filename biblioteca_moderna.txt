@@ -1,0 +1,71 @@
+biblioteca_moderna/  
+├── 📁 .docker/                # Configurações Docker (Opcional)  
+├── 📁 app/  
+│   ├── 📁 Core/              # Núcleo do sistema  
+│   │   ├── Database.php      # Conexão otimizada (PDO + Singleton)  
+│   │   ├── Router.php        # Rotas dinâmicas (FastRoute ou Slim)  
+│   │   ├── Auth.php          # Autenticação JWT ou Session  
+│   │   └── View.php          # Renderização otimizada (Plates ou Twig)  
+│   │  
+│   ├── 📁 Controllers/       # Lógica de negócios  
+│   │   ├── Api/              # Endpoints REST (se necessário)  
+│   │   ├── Web/  
+│   │   │   ├── LivroController.php  
+│   │   │   ├── AlunoController.php  
+│   │   │   ├── AutorController.php  
+│   │   │   └── EmprestimoController.php  
+│   │   └── AuthController.php  
+│   │  
+│   ├── 📁 Models/            # Interação com o banco  
+│   │   ├── LivroModel.php    # Com métodos otimizados (ex: `getLivrosPaginados()`)  
+│   │   ├── AlunoModel.php  
+│   │   ├── AutorModel.php  
+│   │   └── EmprestimoModel.php  
+│   │  
+│   ├── 📁 Services/          # Regras de negócio complexas  
+│   │   ├── EmprestimoService.php # Valida disponibilidade, multas, etc.  
+│   │   └── RelatorioService.php  # Gera CSV/PDF de empréstimos  
+│   │  
+│   └── 📁 Views/  
+│       ├── 📁 layouts/       # Templates reutilizáveis  
+│       │   ├── header.php  
+│       │   ├── footer.php  
+│       │   └── sidebar.php  
+│       │  
+│       ├── 📁 components/    # Componentes UI reutilizáveis  
+│       │   ├── Alert.php     # Mensagens de erro/sucesso  
+│       │   ├── Modal.php     # Modais (ex: confirmar exclusão)  
+│       │   └── Pagination.php# Navegação entre páginas  
+│       │  
+│       ├── 📁 livros/        # Views específicas  
+│       ├── 📁 alunos/  
+│       ├── 📁 autores/  
+│       └── 📁 emprestimos/  
+│  
+├── 📁 config/  
+│   ├── database.php          # Configs de conexão (MySQL)  
+│   ├── cache.php             # Configs de cache (Redis/Memcached)  
+│   └── routes.php            # Definição de rotas  
+│  
+├── 📁 public/                # Pasta pública (DocumentRoot)  
+│   ├── 📁 assets/  
+│   │   ├── 📁 css/           # CSS otimizado (Tailwind/Bootstrap)  
+│   │   ├── 📁 js/            # JavaScript modular (ES6+)  
+│   │   └── 📁 images/        # Imagens comprimidas (WebP)  
+│   │  
+│   ├── 📁 uploads/           # Arquivos enviados (capa de livros)  
+│   └── index.php             # Ponto de entrada único  
+│  
+├── 📁 storage/  
+│   ├── 📁 cache/             # Cache de views/queries  
+│   ├── 📁 logs/              # Logs de acesso/erros  
+│   └── 📁 sessions/          # Armazenamento de sessões  
+│  
+├── 📁 tests/                 # Testes automatizados  
+│   ├── 📁 Unit/              # Testes de modelos  
+│   └── 📁 Feature/           # Testes de controllers  
+│  
+├── 📁 vendor/                # Dependências (Composer)  
+├── 📜 .env                   # Variáveis de ambiente  
+├── 📜 composer.json          # Autoload + Dependências  
+└── 📜 README.md              # Documentação completa  
